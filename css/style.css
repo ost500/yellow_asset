@@ -33,6 +33,7 @@ div{zoom:1;}
 div:after{content:"";display:block;clerar:both;}
 
 
+
 /*input*/
 #checkbox { width:15px; height:15px; background-color:#ffffff; border: 1px solid #3989a1;/*IE9+,FF4+,chrome,Safari5,+opera*/
     border-radius: 0px; /*오페라 10.5이상*/
@@ -57,16 +58,17 @@ div:after{content:"";display:block;clerar:both;}
     behavior: url(ie-css3.htc);/*IE6이상 IE-CSS3 핵사용*/}
 input[type=radio]{display: none;}
 
+@media screen and (min-width:1024px){}
 
 /*wrap*/
 div#Wrap{position:absolute; width:100%; height:auto; min-width:1024px; aling:center;}
 
 
 /*layer*/
-.mw_layer{display:none;position:fixed;top:0;left:0;z-index:10000;width:100%;height:90%;}
+.mw_layer{display:none;position:fixed;top:0;left:0;z-index:10000;width:100%;height:100%;}
 .mw_layer.open{display:block}
 .mw_layer .bg{position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:.5;filter:alpha(opacity=50)}
-#layer{position:absolute;top:40%;left:35%;width:543px; height:716px; margin:-358px 0 0 -272px; border:0px solid #555;background:none;line-height:normal;white-space:normal}
+#layer{position:absolute;top:40%;left:40%;width:543px; height:716px; margin:-358px 0 0 -272px; border:0px solid #555;background:none;line-height:normal;white-space:normal}
 #layer2{position:absolute;top:50%;left:50%;width:362px; height:437px; margin:-190px 0 0 -172px; border:0px solid #555;background:none;line-height:normal;white-space:normal}
 
 
@@ -81,7 +83,7 @@ div#header_wrap{width:100%; height:110px; background:#fff; border-bottom: 1px so
 div#header { position:relative; width:1280px; margin:0px auto; }
 p#logo{ width:235px; height:76px; float:left; margin-top:15px; }
 p#title { width:276px; margin-top:20px; margin-left:400px;}
-div#box { float:left; width:575px; height:90px;; margin-left:720px; margin-top:-66px;}
+div#box { float:left; width:575px; height:90px;; margin-left:680px; margin-top:-70px;}
 div#box span { float:right;}
 table#counseling { display: inline;  border:0px solid red; padding:10px; }
 table#counseling #input01 {float:left;width:150px; height:26px; padding:5px; background-color:#ffffff; border: 2px solid #106dd9;/*IE9+,FF4+,chrome,Safari5,+opera*/
@@ -103,9 +105,9 @@ table#counseling #input02 {float:left;width:50px; height:26px; padding:5px; marg
 
 
 /*visual*/
-div#visual_wrap{ width:100%; height: 273px; float:left;  background:#ffe400; }
+div#visual_wrap{ width:100%; min-width:1024px; height: 273px; float:left;  background:#ffe400; }
 div#visual{ position:relative; width:100%; background:url('../images/visual_bg.png') 0px 0px; margin:0px auto; text-align:center; max-width:1280px; }
-p#visual_btn01{ position:absolute; float:right; right:3px; top:15px; }
+p#visual_btn01{ position:absolute; float:right; right:15px; top:15px; }
 
 
 /*contents*/
@@ -143,12 +145,12 @@ div#cont04 img {margin-top:80px;}
 div#cont05_wrap{ width:100%; height:1263px; background:#fff; text-align:center; }
 div#cont05 {width:100%; text-align:center; color:#636363;}
 div#cont05 img {margin:50px 0 50px 0;}
-div#cont05 .recommend {width:1280px; margin:0px auto;}
+div#cont05 .recommend {width:100%; min-width:1280px; margin:0px auto;}
 div#cont05 .recommend table { width:394px; height:554px; border: 1px solid #ccc; display:inline-block; margin:0px auto; margin:5px 0 0 5px;}
 div#cont05 .recommend tr td {height:48px;}
 div#cont05 .recommend tr td input {margin:15px 0 0 -2px;}
 div#cont05 .reco_details { width:98px; height:43px; background:url('../images/cont05-t-b.png') 10px 2px no-repeat;}
-div#cont05 .recommend tr td span {font-weight:bold; color:#1c63bb;}
+div#cont05 .recommend tr td span {font-weight:bold; font-size:17px; letter-spacing:-0.05em; }
 div#cont06_wrap{ width:100%; height:523px; background:#f4f2f2; text-align:center;}
 div#cont06 { width:1159px; height:402px; margin:0px auto; margin-top:60px;}
 div#cont06 img {margin-top:60px;}
@@ -166,7 +168,7 @@ div#cont06 img {margin-top:60px;}
 
 
 /*footer*/
-div#footer_wrap{position:relative; width:100%; height:168px; background:url('../images/footer-bg.jpg')0 0; float:left; }
+div#footer_wrap{position:relative; width:100%; min-width:1024px; height:168px; background:url('../images/footer-bg.jpg')0 0; float:left; }
 div#footer{ width:1280px; margin:0px auto; margin-top:28px; }
 div#footer address {margin-left:50px; display:inline-block; font-size:11px; color:#888; }
 div#footer address span {color:#1654af; font-weight: 600;}
@@ -214,11 +216,13 @@ div#footer .estimate {float:right;}
 
 
 
-#pop-example01 {position:absolute; background:url('../images/pop-example01.png') no-repeat 0 0 ; width:1093px; height:964px; text-align:center;}
-#pop-example01 .top {margin-top:40px;}
-#pop-example01 .top h1 {font-size:35px;}
+#pop-example01 {position:absolute; background:url('../images/pop-example01.png') no-repeat; width:100%; min-width:900px; max-width:1093px; height:793px; text-align:center;}
+:root .pop-example01{height:793px0/IE9;}
+
+#pop-example01 .top {margin-top:25px;}
+#pop-example01 .top h1 {font-size:25px;}
 #pop-example01 .pop_sec {display:none;padding:0px 20px;}
-.p-e-reckoning { width:530px; margin:60px 0 0 0px; float:right;}
+.p-e-reckoning { width:450px; margin:45px 0 0 0px; float:right;}
 .p-e-reckoning  span { font-size:27px; letter-spacing:-0.12em; background:url('../images/reckoning-name-line.jpg') 0 28px no-repeat; }
 .p-e-reckoning .name { float:left; font-size:27px; }
 .p-e-reckoning .name b {font-size:27px; }
@@ -227,21 +231,21 @@ div#footer .estimate {float:right;}
 .p-e-reckoning p strong { font-size:18px; color:#034583;}
 .p-e-reckoning p span {font-size:15px; color:#898989;}
 
-#pop-example01 .form_area {position:absolute;top:180px;left:0;width:450px; padding:10px; }
-#pop-example01 .form_area table {width:100%; padding:0px;margin:0px;font-size:14px; color:#333;border:0px solid #ddd;margin-left:20px;padding:0px;border-spacing:0px; }
+#pop-example01 .form_area {position:absolute;top:140px;left:0;width:450px; padding:10px; }
+#pop-example01 .form_area table {width:400px; padding:0px;margin:0px;font-size:14px; color:#333;border:0px solid #ddd;margin-left:20px;padding:0px;border-spacing:0px; }
 #pop-example01 .form_area table th { padding:0px;margin:0px;font-weight:400;color:#222;font-size:16px;text-align:left;padding-right:10px;width:50px; }
 #pop-example01 .form_area table td {width:auto; padding:3px 0px;margin:0px;color:#222; }
 
-#pop-example01 .form_area input[type=text] {float:left;width:260px; height:26px; padding:5px; background-color:#ffffff; border: 2px solid #ff4651;/*IE9+,FF4+,chrome,Safari5,+opera*/
+#pop-example01 .form_area input[type=text] {float:left;width:210px; height:26px; padding:5px; background-color:#ffffff; border: 2px solid #ff4651;/*IE9+,FF4+,chrome,Safari5,+opera*/
     border-radius: 0px; /*오페라 10.5이상*/
     -moz-border-radius: 0px; /*모질라*/
     -webkit-border-radius: 0px; /*웹킷브라우저 구글크롬 사파리*/
     behavior: url(ie-css3.htc);/*IE6이상 IE-CSS3 핵사용*/}
 
 
-#pop-example01 ul.pop_tab { display:block; height:65px;background:#c2c2c2; margin:200px 0 0 20px ; width:1053px;}
+#pop-example01 ul.pop_tab { display:block; height:65px;background:#c2c2c2; margin:170px 0 0 20px ; width:96%; max-width:1053px;}
 
-#pop-example01 ul.pop_tab li { position:relative;float:left;display:inline;width:20%;line-height:65px;height:65px;text-align:center;font-weight:300;font-size:20px;color:#fff;cursor:pointer;border-left:1px solid #fff;margin-left:-1px; }
+#pop-example01 ul.pop_tab li { position:relative;float:left;display:inline;width:20%;line-height:65px;height:65px;text-align:center;font-weight:300;font-size:17px;color:#fff;cursor:pointer;border-left:1px solid #fff;margin-left:-1px; }
 #pop-example01 .pop_tab li i {display:none; }
 #pop-example01 .pop_tab li:first-child {border-left:1px solid rgba(255,255,255,0);}
 #pop-example01 .pop_tab li:last-child {line-height:65px; height:65px;}
@@ -251,16 +255,16 @@ div#footer .estimate {float:right;}
 
 
 
-#pop-example01 .tab_area { padding:30px 0px 30px 0px;display:none; overflow-y:auto;background:#fff; width:1051px; margin-left:20px; border:1px solid #c2c2c2; text-align:left; }
+#pop-example01 .tab_area { padding:30px 0px 30px 0px;display:none; overflow-y:auto;background:#fff;  width:96%; max-width:1051px; margin-left:20px; border:1px solid #c2c2c2; text-align:left; }
 #pop-example01 .tab_area img{float:left;}
 #pop-example01 .tab_area p {font-size:28px; letter-spacing:-0.1em; margin-left:30px; height:100px;}
 #pop-example01 .tab_area p strong {font-size:28px; color:#ff4651;}
 #pop-example01 .tab_area p span {font-size: 15px;  letter-spacing:-0.05em; color:#575757; font-weight:600;}
-#pop-example01 .tab_area.on { display:block;  height: 343px;}
-#pop-example01 .tab_area .note{ width: 986px; height:83px; background-color:#f7f7f7; margin-left:30px; padding:10px; color:#333;}
+#pop-example01 .tab_area.on { display:block; height: 275px;}
+#pop-example01 .tab_area .note{ width: 94%; height:83px; background-color:#f7f7f7; margin-left:30px; padding:10px; color:#333;}
 
 
-#pop-example01 .tab_area .guarantee {width:96%; padding:0px 20px 30px 20px; color:#333;}
+#pop-example01 .tab_area .guarantee {width:94%; padding:0px 20px 30px 20px; color:#333;}
 #pop-example01 .tab_area .guarantee span {background:url('../images/belit03.jpg') 0 0 no-repeat; font-size:20px; font-weight:500; line-height:40px;}
 
 #pop-example01 .tab_area .guarantee p { width:94%; font-size:13px; color:#8b8c94; margin-top:20px; line-height:20px; letter-spacing:0.01em; }
@@ -280,14 +284,16 @@ div#footer .estimate {float:right;}
 #pop-example01 .tab_area .know span {background:url('../images/belit03.jpg') 0 0 no-repeat; font-size:20px; font-weight:500; line-height:40px;}
 #pop-example01 .tab_area .know strong {font-size:15px;}
 
-#pop-example01 .t-identify {width:70%; padding:4% 0 4% 19%; margin-bottom:40px;}
+#pop-example01 .t-identify {width:70%; padding:0% 0 4% 17%; }
 #pop-example01 .t-identify p {font-size:25px; height:60px;background:url('../images/belit03.jpg') 0 3px no-repeat; margin-left:-5px;}
-#pop-example01 .t-identify table {width:100%; float:left; }
+#pop-example01 .t-identify table {width:94%; float:left; }
 #pop-example01 .t-identify tr {height:50px;}
-#but04 {position:relative; float:left; margin:30px 0 0 220px; #margin:50px 0 0 220px;}
+#but04 {position:relative; float:left; margin:20px 0 0 150px;}
 
 /*margin*/
 .m01 {margin-right: 130px;}
-.m02 {margin-left: 110px;}
+.m02 {margin-left: 100px;}
 .m03 {margin-top: 35px;}
 .m04 {margin-left: 50px;}
+
+.f01 {text-align:left; width:380px; padding-left:20px;}
