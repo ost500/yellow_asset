@@ -1,0 +1,1704 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>옐로우에셋</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+
+    <script type="text/javascript">
+
+        jQuery(function ($) {
+
+            var layerWindow = $('.mw_layer');
+
+            var layer = $('#layer');
+
+            // Show Hide
+
+            $('.layer_trigger').click(function () {
+
+                layerWindow.addClass('open');
+
+            });
+
+            $('#layer .close').click(function () {
+
+                layerWindow.removeClass('open');
+
+            });
+
+
+            /* ESC Event*/
+
+            $(document).keydown(function (event) {
+
+                if (event.keyCode != 27) return true;
+
+                if (layerWindow.hasClass('open')) {
+
+                    layerWindow.removeClass('open');
+
+                }
+
+                return false;
+
+            });
+
+
+            // Hide Window
+
+            layerWindow.find('>.bg').mousedown(function (event) {
+
+                layerWindow.removeClass('open');
+
+                return false;
+
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+<div id="Wrap">
+    <!-- banner -->
+    <div id="banner_wrap">
+        <div id="banner">
+            <div class="lf">
+				<span><img src="images/top-banner01.jpg" alt="무료상담" class="m01"/><span>
+				<span><img src="images/top-banner02.jpg" alt="캐쉬백지급" class="m01"/></span>
+            </div>
+            <div class="rt">
+                <span><img src="images/top-banner03.jpg" alt="11개손해보험비교" class="m02"/></span>
+                <span><img src="images/top-banner04.jpg" alt="암보험비교NO1" class="m02"/></span>
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+    <!-- header -->
+    <div id="header_wrap">
+        <div id="header">
+            <p id="logo"><img src="images/header-logo.png" alt="옐로우에셋 로고"/></p>
+            <p id="title"><img src="images/header-title-icon.jpg" alt="1초암보험비교견적사이트"/></p>
+<?
+	include_once("form1.skin.php");
+?>            
+        </div>
+    </div>
+    <!-- header -->
+    <!-- visual -->
+    <div id="visual_wrap">
+        <div id="visual">
+            <p><img src="images/main-visual.png" alt="전문가가 제안하는 비갱신암보험"/></p>
+            <p id="visual_btn01"><a href="#cont01_wrap"><img src="images/main-but01.png" alt="의료실비보험비교"/></a></p>
+        </div>
+    </div>
+    <!-- visual -->
+    <!-- cont01 -->
+    <div id="cont01_wrap">
+        <div id="cont01">
+            <div class="identify">
+                <form name="realtime_estimate" onsubmit="return false;">
+                    <input type="hidden" name="wcode" value="RFP001">
+                    <table>
+                        <caption style="display:none">내 암보험료는 얼마</caption>
+                        <tr>
+                            <th scope="row" id="input01-1"><label for="input01">이름</label></th>
+                            <td headers="input01-1"><input type="text" name="uname" id="input01" class="textfield"
+                                                           style="outline:none" placeholder="이름을 입력해주세요."/></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="input01-1"><label for="input01">생년월일</label></th>
+                            <td headers="input01-2"><input type="text" name="ubirth" id="input01" class="textfield"
+                                                           style="outline:none" placeholder="예)19860120"/></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="input03-1"><label>성별</label></th>
+                            <td><input type="radio" name="usex" id="r_circle01" value="M" onclick="radio_Test();"/><label
+                                    for="r_circle01"><img id="a123" src="images/cont01-but01.jpg"
+                                                          alt="남자"/></label>
+                                <input type="radio" name="usex" value="F"
+                                       id="r_circle02"
+                                       onclick="radio_Test();"/><label
+                                        for="r_circle02"><img id="a456" src="images/cont01-but02.jpg" alt="여자" /
+                                    ></label>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row" id="input02-1"><label for="input02">연락처</label></th>
+                            <td headers="input02-1">
+                                <select name="uhp_1" id="select">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+									<option value="016">016</option>
+									<option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                                <input type="text" name="uhp_2" id="input02" class="textfield"
+                                       style="outline:none"/>
+                                <input type="text" name="uhp_3" id="input02" class="textfield"
+                                       style="outline:none"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" scope="row"><label>개인정보수집 및 이용 동의</label><input type="checkbox" id="agree"
+                                                                                            name="agree" required
+                                                                                            value="1"
+                                                                                            class="required"></td>
+                        </tr>
+                    </table>
+                    <span><input class="func_estimate_ok" type="image" src="images/cont01-but03.jpg"
+                                 alt="내 보험료 확인"/></span>
+                </form>
+            </div>
+
+            <div class="reckoning">
+                <div class="r_infor01"><span id="calculate_name">홍길동</span><img src="images/cont01-check-title1.png"
+                                                                                alt="님의 암보험 계산결과"/>
+                </div>
+                <table>
+					<tr>
+						<td class="btn"><a href="#layer" class="layer_trigger" >   <input type="image" style="outline:none"  src="images/cont01-check01.gif" alt="보험료 확인" /> </a></td>
+						<td class="btn"><a href="#layer" class="layer_trigger" > <input type="image" style="outline:none"  src="images/cont01-check02.gif" alt="보험료 확인" /></a></td>
+						<td class="btn"><a href="#layer" class="layer_trigger" > <input type="image" style="outline:none"  src="images/cont01-check03.gif" alt="보험료 확인" /></a></td>
+					</tr>
+					<tr>
+						<td class="btn"><a href="#layer" class="layer_trigger" > <input type="image" style="outline:none"  src="images/cont01-check04.gif" alt="보험료 확인" /></a></td>
+						<td class="btn"> <a href="#layer" class="layer_trigger"> <input type="image" style="outline:none"  src="images/cont01-check05.gif" alt="보험료 확인" /></a></td>
+						<td class="btn"><a href="#layer" class="layer_trigger" > <input type="image" style="outline:none"  src="images/cont01-check01.gif" alt="보험료 확인" /></a></td>
+					</tr>
+				</table>
+                <div class="r_infor02"><span id="calculate_name2">홍길동</span><img src="images/cont01-check-title2.png"
+                                                                                 alt="님의 보험나이는"/></div>
+                <div class="r_infor03"><span id="calculate_age">00</span><img src="images/cont01-check-title3.png"
+                                                                              alt="세입니다."/></div>
+                <div class="r_infor04"><span id="calculate_name3">홍길동</span>님의 보험상령일은(보험료 오르는 나이)<br/><span>0000년 00월 00일</span>입니다
+                </div>
+            </div>
+
+            <div class="real_time">
+			     <table class="present" style="text-align: center;line-height:25px;">
+                    <tr>
+						<th>년도 / 월 / 일</th>
+					    <th>성함</th>
+						<th>보험료</th>
+                   </tr>
+				   </table>
+                <div id="obj_history_area" style="overflow: hidden;height: 150px;text-align: center;">
+				  
+                    <!--<table class="present">-->
+                    <!--<tr>-->
+                    <!--<th>년도 / 월 / 일</th>-->
+                    <!--<th>성함</th>-->
+                    <!--<th>보험료</th>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>2016.10.17</td>-->
+                    <!--<td>김**</td>-->
+                    <!--<td>34,949원</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>2016.10.17</td>-->
+                    <!--<td>김**</td>-->
+                    <!--<td>34,949원</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>2016.10.17</td>-->
+                    <!--<td>김**</td>-->
+                    <!--<td>34,949원</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>2016.10.17</td>-->
+                    <!--<td>김**</td>-->
+                    <!--<td>34,949원</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>2016.10.17</td>-->
+                    <!--<td>김**</td>-->
+                    <!--<td>34,949원</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>2016.10.17</td>-->
+                    <!--<td>김**</td>-->
+                    <!--<td>34,949원</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>2016.10.17</td>-->
+                    <!--<td>김**</td>-->
+                    <!--<td>34,949원</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>2016.10.17</td>-->
+                    <!--<td>김**</td>-->
+                    <!--<td>34,949원</td>-->
+                    <!--</tr>-->
+                    <!--</table>-->
+                </div>
+                <form name="popfm_03" id="id_popfm_03" method="post" onsubmit="return false; ">
+				<input type="hidden" name="wcode" value="RFP003">
+                    <table class="advice">
+                        <tr>
+                            <th scope="row" id="input01-1"><label for="input01">이름</label></th>
+                            <td headers="input01-1"><input type="text" name="uname" id="input01"
+                                                           class="textfield" style="outline:none"
+                                                           placeholder="이름을 입력해주세요."/></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="input02-1"><label for="input02">연락처</label></th>
+                            <td headers="input02-1">
+                                <select name="uhp1" id="select">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+									<option value="016">016</option>
+									<option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                                <input type="text" name="uhp2" id="input02" class="textfield"
+                                       style="outline:none"/> <input type="text" name="uhp3" id="input02"
+                                                                     class="textfield" style="outline:none"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" scope="row"><label>개인정보수집 및 이용 동의<input type="checkbox" id="agree"
+                                                                                    name="agree" required value="1"
+                                                                                    class="required"></label></td>
+                        </tr>
+                    </table>
+                    <span><input type="image" src="images/cont01-but04.jpg" alt="상담신청"
+                                 onclick="setApply( document.popfm_03, 'id_popfm_03' );"/></span>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- cont01 -->
+    <!-- cont02 -->
+    <div id="cont02_wrap">
+        <div id="cont02">
+            <img src="images/cont02.jpg" alt="나에게 유리한 암보험은?"/>
+        </div>
+    </div>
+    <!-- cont02 -->
+    <!-- cont03 -->
+    <div id="cont03_wrap">
+        <div id="cont03">
+            <p>보험가입시 <b>50% 캐쉬백 제공</b><br/><span>(3만원한도/손보제외)</span><br/><br/><input type="image"
+                                                                                     src="images/cont03-but01.jpg"
+                                                                                     alt="신청하기" class="m03"/></p>
+            <p>원하시는 보험사 상품이 있으신 경우<br/><b>하단 견적신청을 눌러주세요</b><br/><span>32개 보험사 , 100여개 상품을 쉽고, 간편하게 보험료비교 해 드립니다.</span><br/><br/><a
+                    herf="#layer" class="layer_trigger"><input type="image" src="images/cont03-but02.jpg"
+                                                               alt="다른보험사견적신청"/></p>
+        </div>
+    </div>
+    <!-- cont03 -->
+    <!-- cont04 -->
+    <div id="cont04_wrap">
+        <div id="cont04">
+            <img src="images/cont04.png" alt="가입자분들이 자주하는 질문모음"/>
+        </div>
+    </div>
+    <!-- cont04 -->
+    <!-- cont05 -->
+    <div id="cont05_wrap">
+        <div id="cont05">
+            <img src="images/cont05-title.jpg" alt="MD가 추천하는 암보험리스트" / >
+            <div class="recommend">
+                <table>
+                    <tr>
+                        <th colspan="3"><img src="images/cont05-ci01.jpg" alt="메르츠화재"></th>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><span>메리츠화재</span>(무)알파plus보장보험1604_암플랜</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">- 처음낸 보험료 그대로 갱신없이 100세까지 보장 [100세만기 가입시]<br/>- 16대특정암, 5대고액암 보장 [특약가입시]</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">손해보험협회 심의필 제2016-1340호(2016.10.19)</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">가입나이</th>
+                        <td colspan="2">만15세-60세</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">보장기간</th>
+                        <td colspan="2">80세/90세/100세</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">가입유형</th>
+                        <td colspan="2">일부만기환급형</td>
+                    </tr>
+                    <tr class="reco_but">
+                        <td><input type="image" src="images/cont05-but01.jpg" alt="보험료계산"/></td>
+                        <td><input type="image" src="images/cont05-but02.jpg" alt="자세히보기"/></td>
+                        <td><input type="image" src="images/cont05-but03.jpg" alt="무료상담신청"/></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th colspan="3"><img src="images/cont05-ci02.jpg" alt="mg손해보험"></th>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><span>MG손해보험</span>(무)건강명의암보험1604</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">- 고액치료비드는 특정암, 3대고액암 보장 [특약가입시]<br/>- 갱신없이 처음낸 보험료 그대로 보장[특약가입시]</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">손해보험협회 심의필 제2016-4005호(2016.10.04)</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">가입나이</th>
+                        <td colspan="2">만15세-65세</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">보장기간</th>
+                        <td colspan="2">15/20년,80세/90세/100세/110세</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">가입유형</th>
+                        <td colspan="2">일부만기환급형</td>
+                    </tr>
+                    <tr class="reco_but">
+                        <td><input type="image" src="images/cont05-but01.jpg" alt="보험료계산"/></td>
+                        <td><input type="image" src="images/cont05-but02.jpg" alt="자세히보기"/></td>
+                        <td><input type="image" src="images/cont05-but03.jpg" alt="무료상담신청"/></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th colspan="3"><img src="images/cont05-ci03.jpg" alt="흥국화재"></th>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><span>흥국화재</span>(무) 행복을 多주는가족사랑통합보험(16 08 )[암플랜]</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">- 상해, 질병50%이상 후유장해시 보험료 납입면제<br/>- 다양한 암특약 추가 가능한 암플랜[특약가입시]</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">손해보험협회 심의필 제2016-4564호(2016.10.04)</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">가입나이</th>
+                        <td colspan="2">만15세-65세</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">보장기간</th>
+                        <td colspan="2">60세/70세/80세/90세/100세</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">가입유형</th>
+                        <td colspan="2">일부만기환급형</td>
+                    </tr>
+                    <tr class="reco_but">
+                        <td><input type="image" src="images/cont05-but01.jpg" alt="보험료계산"/></td>
+                        <td><input type="image" src="images/cont05-but02.jpg" alt="자세히보기"/></td>
+                        <td><input type="image" src="images/cont05-but03.jpg" alt="무료상담신청"/></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="recommend">
+                <table>
+                    <tr>
+                        <th colspan="3"><img src="images/cont05-ci04.jpg" alt="kb손해보험"></th>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><span>KB손해보험</span>(무)KB닥터플러스건강보험(16.09)_암플랜</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">- 100세까지 비갱신으로 가입 가능한 상품[100세만기 선택시]<br/>- 암수술비, 항암방사선치료비, 암입원일당 등 추가 [특약가입시]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">심의번호</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">가입나이</th>
+                        <td colspan="2">0세~ (80세 - 납입기간)</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">보장기간</th>
+                        <td colspan="2">80세/90세/100세/110세</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">가입유형</th>
+                        <td colspan="2">일부만기환급형</td>
+                    </tr>
+                    <tr class="reco_but">
+                        <td><input type="image" src="images/cont05-but01.jpg" alt="보험료계산"/></td>
+                        <td><input type="image" src="images/cont05-but02.jpg" alt="자세히보기"/></td>
+                        <td><input type="image" src="images/cont05-but03.jpg" alt="무료상담신청"/></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th colspan="3"><img src="images/cont05-ci05.jpg" alt="현대해상"></th>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><span>현대해상</span>(무)암스트롱보암험보(Hi1605)2종</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">- 4기암(특정중증암제외) 보장[특약가입시]<br/>- 처음낸 보험료 그대로 100세까지 보장 [특약 가입시]</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">손해보험협회 심의필 제2016-4605호(2016.10.10)</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">가입나이</th>
+                        <td colspan="2">만15세~ (80세 - 납입기간)</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">보장기간</th>
+                        <td colspan="2">80세/90세/100세</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">가입유형</th>
+                        <td colspan="2">일부만기환급형</td>
+                    </tr>
+                    <tr class="reco_but">
+                        <td><input type="image" src="images/cont05-but01.jpg" alt="보험료계산"/></td>
+                        <td><input type="image" src="images/cont05-but02.jpg" alt="자세히보기"/></td>
+                        <td><input type="image" src="images/cont05-but03.jpg" alt="무료상담신청"/></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th colspan="3"><img src="images/cont05-ci01.jpg" alt="메리츠화재"></th>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><span>메리츠화재<span>(무)메리츠걱정없는암보험1604(2종)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">- 암진단시, 질병(상해)80%이상 후유장해 발생시 보험료 납입면제<br/>- 처음낸 보험료 그대로 100세까지 보장 [100세만기 가입시]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">손해보험협회 심의필 제2016-1341(2016.10.19)</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">가입나이</th>
+                        <td colspan="2">0세~ 60세</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">보장기간</th>
+                        <td colspan="2">80세/90세/100세</td>
+                    </tr>
+                    <tr>
+                        <th class="reco_details">가입유형</th>
+                        <td colspan="2">일부만기환급형</td>
+                    </tr>
+                    <tr class="reco_but">
+                        <td><input type="image" src="images/cont05-but01.jpg" alt="보험료계산"/></td>
+                        <td><input type="image" src="images/cont05-but02.jpg" alt="자세히보기"/></td>
+                        <td><input type="image" src="images/cont05-but03.jpg" alt="무료상담신청"/></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- cont05 -->
+    <!-- cont06 -->
+    <div id="cont06_wrap">
+        <div id="cont06">
+            <img src="images/cont06.jpg" alt="실시간카톡상담 무료상담고객센터 사랑을 실천합니다."/>
+        </div>
+    </div>
+    <!-- cont06 -->
+    <!-- partner -->
+    <div id="partner_area">
+        <img src="images/partner-title.jpg" alt="여러보험사의 100여개 상품을 서로 비교해보고, 나의 보험료를 직접 확인하신 후 가입하실 수 있습니다."/>
+        <div class="area_wrap">
+            <div class="roll_area">
+                <img src="images/partner_1.jpg" no="1" style="left: 0px;">
+                <img src="images/partner_2.jpg" no="2" style="left: -950px; display: block;">
+                <img src="images/partner_3.jpg" no="3" style="left: -950px; display: block;">
+            </div>
+            <a class="lt" onclick="rolling_area.left();"></a>
+            <a class="rt" onclick="rolling_area.right();"></a>
+        </div>
+        <script>
+
+            var roll_obj;
+            var roll_no = 1;
+            var roll_cnt = 3;
+            var roll_sec = 6000;
+            var roll_ing = 0;
+            var _next_no = 0;
+
+            var rolling_area = {
+
+                left: function () {
+
+                    if (roll_ing == 0) {
+
+                        roll_ing = 1;
+
+                        clearTimeout(roll_obj);
+
+                        _next_no = roll_no - 1;
+
+                        if (_next_no < 1)
+                            _next_no = roll_cnt;
+
+
+                        $('.roll_area').find('img[no=' + roll_no + ']').stop().css('left', '0px').show().animate({left: 950}, {
+                            queue: false, duration: 700,
+                            complete: function () {
+
+                            }
+                        });
+
+
+                        $('.roll_area').find('img[no=' + _next_no + ']').stop().css('left', '-950px').show().animate({left: 0}, {
+                            queue: false, duration: 700,
+                            complete: function () {
+                                roll_ing = 0;
+                                roll_no = _next_no;
+                            }
+                        });
+
+//					roll_obj = setTimeout("rolling_area.left();", 6000);
+
+                    }
+
+                },
+                right: function () {
+
+                    if (roll_ing == 0) {
+
+                        roll_ing = 1;
+
+                        clearTimeout(roll_obj);
+
+                        _next_no = roll_no + 1;
+
+                        if (_next_no > roll_cnt)
+                            _next_no = 1;
+
+
+                        $('.roll_area').find('img[no=' + roll_no + ']').stop().css('left', '0px').show().animate({left: -950}, {
+                            queue: false, duration: 700,
+                            complete: function () {
+                            }
+                        });
+
+
+                        $('.roll_area').find('img[no=' + _next_no + ']').stop().css('left', '950px').show().animate({left: 0}, {
+                            queue: false, duration: 700,
+                            complete: function () {
+                                roll_ing = 0;
+                                roll_no = _next_no;
+                            }
+                        });
+
+//					roll_obj = setTimeout("rolling_area.right();", 6000);
+
+                    }
+
+                }
+            }
+
+            roll_obj = setTimeout("rolling_area.right();", 6000);
+        </script>
+    </div>
+    <!-- partner -->
+    <!-- footer -->
+    <div id="footer_wrap">
+        <div id="footer">
+            <img src="images/footer-logo.png" alt="옐로우에셋로고"/>
+            <img src="images/footer-line.png" alt="라인" class="m04"/>
+            <address><span>●  옐로우에셋</span><br/><br/>사업자등록번호 : 845-48-00138 ｜대리점등록번호 : 20091278호<br/>주소 : 경기도 고양시 일산동구
+                정발산로 42번길 38, 635호 (라이저오피스텔)<br/>무료상담전화 : 050-6191-5555 ｜ 제휴문의 : jazzfa@naver.com<br/>(주)글로벌금융판매 옐로우에셋은
+                보험업법 제 149조에 의한 금융감독원 허가업체입니다.
+            </address>
+            <img src="images/footer-con01.png" alt="똑똑한 고객의 탁월한선택 암보험비교 1초 견적사이트" class="estimate"/>
+        </div>
+    </div>
+    <!-- footer -->
+    <!--레이어팝업 -->
+    <div class="mw_layer">
+        <div class="bg"></div>
+        <div id="layer">
+            <div id="pop-example01">
+                <!-- close-->
+                <div class="close"><a href="javascript:window.hide();"><img src="images/web_dw_close.png"></a></div>
+                <!-- close end-->
+                <!-- 정보입력-->
+                <div class="top"><img src="images/pop-example01_logo.png" alt="메르츠화재"/ ><br/>
+                    <h1>(무)알파plus보장보험1604_암플랜</h1></div>
+                <div class="pop_sec" no="1" style="display: block;">
+                    <div class="form_area">
+                        <form name="popfm_04" id="id_popfm_04" method="post" onsubmit="return false; ">
+                            <input type="hidden" name="wcode" value="RFP002">
+                            <input type="hidden" name="gcode" value="GDS002">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <th>이름</th>
+                                    <td><input type="text" name="uname" placeholder="이름을 입력해주세요."></td>
+                                    <td rowspan="2" class="btn">
+                                        <input type="image" src="images/pop-example01-but01.png" alt="보험료계산" onclick="setApply_pop( document.popfm_04, 'id_popfm_04' );"/></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>연락처</th>
+                                    <td><input type="text" name="uhp" placeholder="예) 010-1234-5678"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="p-e-reckoning">
+                        <div class="name"><span id="pop_name" >홍길동동</span>님의 <b>보험료</b>는</div>
+                        <div class="sum"><span id="pop_price">100,000</span>원 입니다.</div>
+                        <br/><br/>
+                        <p><strong>메리츠화재 (무)알파plus보장보험1604_암플랜</strong><br/>
+                            <span>손해보험협회 심의필 제2016-1340호(2016.10.19)</span></p>
+                    </div>
+                    <!-- tab-->
+                </div>
+                <ul class="pop_tab">
+                    <li id="pop_tab1" no="1">상품특징<i></i></li>
+                    <li id="pop_tab2" no="2">보장내용<i></i></li>
+                    <li id="pop_tab3" no="3" class="on">가입예시<i></i></li>
+                    <li id="pop_tab4" no="4">가입시알아둬야할사항<i></i></li>
+                </ul>
+                <div id="tab_content1" class="tab_area" no="1" >
+                    <p><img src="images/belit01.jpg" alt="1">&nbsp;&nbsp;처음낸 보험료 그대로 갱신없이 <strong>100세까지 [100세만기
+                        특약가입시]</strong><br/><span>&nbsp;&nbsp;- 갱신주기 없이 , 처음낸 보험료 그대로 보장</span></p>
+                    <p><img src="images/belit02.jpg" alt="2">&nbsp;&nbsp;<strong>암수술비, 암직접치료입원일당, </strong> 항암방사선약물치료비
+                        특약추가가능<br/><span>&nbsp;&nbsp;- 종합적인 보장이 필요할 땐 암진단비 외 암특약 추가 [해당 특약가입시]</span></p>
+                    <div class="note">
+					<span>
+						<b>■ 가입 시 주의하실 사항입니다.</b><br/><br/>
+						이 예시는 약관을 개괄적으로 설명한 것이므로 자세한 내용은 반드시 해당 약관 및 상품설명서를 읽어보시기 바랍니다.<br/>
+						기존에 체결했던 계약을 해지하고 다른 계약을 체결 시 인수가 거절되거나 보험료가 인상될 수 있으며 보장내용이 달라질 수 있으니 기존 계약 하제 시 신중히 선택하시기 바랍니다.
+					</span>
+                    </div>
+                </div>
+                <div id="tab_content2" class="tab_area" no="2">
+                    <div class="guarantee">
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;기본계약 보장내용</span>
+                        <table>
+                            <tr>
+                                <th>담보명</th>
+                                <th class="g_con">보장내용</th>
+                                <th>가입금액(만원)</th>
+                            </tr>
+                            <tr>
+                                <td>일반상해고도후유장해[기본계약]<br/>20년납 100세만기</td>
+                                <td class="g_con">일반상해로 80%이상에 해당하는 장해상태가 되었을시 가입금액 지급</td>
+                                <td>1,000</td>
+                            </tr>
+                            <table><br/>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;선택특약 보장내용</span>
+                                <table>
+                                    <tr>
+                                        <th>담보명</th>
+                                        <th class="g_con">보장내용</th>
+                                        <th>가입금액(만원)</th>
+                                    </tr>
+                                    <tr>
+                                        <td>일반상해사망<br/>20년납 100세만기</td>
+                                        <td class="g_con">일반상해로 사망한 경우 지급</td>
+                                        <td>1,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>질병 80%이상후유장해<br/>20년납 100세만기</td>
+                                        <td class="g_con">보험기간 중 진단확정된 질병으로 장해분류표(약관참조)에서 정한 장해지급률 80%이상에 해당하는 장해상태가
+                                            되었을시 가입금액 지급
+                                        </td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>일반상해사망 고도후유장해<br/>20년납 20년만기</td>
+                                        <td class="g_con">일반상해로 사망 또는 80%이상에 해당하는 장해상태가 되었을시가입금액 지급</td>
+                                        <td>5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>암진단비<br/>20년납 100세만기</td>
+                                        <td class="g_con">암보장개시일(보장개시일부터 그날을 포함하여 90일이 지난날의 다음날, 계약일 현재 보험나이 15세 미만의 경우
+                                            보장개시(일)이후 암으로 진단확정시 최초 1회한 가입금액 지급(1년미만 50%지급)<br/>-보장개시일 이후 제자리암, 기타피부암,
+                                            경계성종양, 갑상선암 진단확정시 각각 최초 1회한 가입금액의 10% 지급(1년미만 5%지급)
+                                        </td>
+                                        <td>3,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>암진단비(Ⅰ)<br/>20년납 100세만기</td>
+                                        <td class="g_con">암보장개시일(보장개시일부터 그날을 포함하여 90일 지난날의 다음날, 계약일 현재 보험나이 15세 미만의 경우
+                                            보장개시일)이후 암 또는 보장개시일이후 제자리암, 기타피부암, 경계성종양 또는 갑상선암으로 수술시(항암방사선, 항암약물 치료 제외)
+                                            수술1회당 가입금액의 20%지급(1년미만 10% 지급)
+                                        </td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>암진단비(Ⅱ)<br/>20년납 100세만기</td>
+                                        <td>암보장개시일(보장개시일부터 그날을 포함하여 90일이 지난날의 다음날, 계약일 현재 보험나이 15세 미만의 경우 보장개시일)이후 암으로
+                                            수술시(항암방사선, 항암약물 치료 제외) 최초 1회한 가입금액의 80%지급(1년미만 40%지급)
+                                        </td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>암직접치료입원일당(4일이상)<br/>20년납 100세만기</td>
+                                        <td class="g_con">암보장개시일(보장개시일부터 그날을 포함하여 90일 지난날의 다음날, 계약일 현재 보험나이 15세 미만의 경우
+                                            보장개시일)이후 암으로 진단확정되거나 보장개시일 이후 제자리암, 기타피부암, 경계성종양 또는 갑상선암으로 진단확정되어 그 질병의 직접적인
+                                            치료를 목적으로 4일이상 계속 입원한 경우 120일 한도로 3일초과 입원 1일당 지급(제자리암, 기타피부암, 경계성종양, 갑상선암은
+                                            20%지급)
+                                        </td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>항암방사선약물치료비<br/>20년납 100세만기</td>
+                                        <td class="g_con">암보장개시일(보장개시일부터 그날을 포함하여 90일이 지난날의 다음날, 계약일 현재 보험나이 15세 미만의 경우
+                                            보장개시일)이후 암으로 항암방사선 약물치료시 최초 1회한 가입금액 지급(1년미만 50%지급)<br/>-보장개시일이후 기타피부암,
+                                            갑상선암으로 항암방사선 약물치료시 각각 최초 1회한 가입금액의 20%지급(1년미만 10% 지급)
+                                        </td>
+                                        <td>300</td>
+                                    </tr>
+                                </table>
+                                <p>상기 가입예시는 이해를 돕기 위한 것으로 기본계약(일반상해고도후유장해) 이외의 선택특약은 자유롭게 선택하여 가입할 수 있으며, 최초가입 시 피보험자의
+                                    나이가 60세 이하인 경우 질병80%이상후유장해 특약 및 최초가입 시 피보험자의 나이가 만 15세 이상인 경우 일반상해사망 특약을 의무 가입 하셔야
+                                    합니다. </p>
+                    </div>
+                </div>
+                <div id="tab_content3" class="tab_area on" no="3">
+                    <div class="example">
+                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;주의사항</span><br/>아래 예시는 약관을 개괄적으로 설명한 것이므로 자세한 내용은 반드시 약관
+                            및 상품설명서를 읽어보시기 바랍니다.</p>
+                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;기본계약 특약별 보험료 예시</span><br/>기준 : 100세만기(특약별상이), 20년납, 월납,
+                            상해1급, 자가용운전자</p>
+                        <table>
+                            <tr>
+                                <th rowspan="2">구분</th>
+                                <th rowspan="2">보장명</th>
+                                <th rowspan="2">보장금액(만원)</th>
+                                <th rowspan="2">납입/보험기간</th>
+                                <th colspan="3">남자보험료(원)</th>
+                                <th colspan="3">여자보험료(원)</th>
+                            </tr>
+                            <tr>
+                                <th>30세</th>
+                                <th>40세</th>
+                                <th>50세</th>
+                                <th>30세</th>
+                                <th>40세</th>
+                                <th>50세</th>
+                            </tr>
+                            <tr>
+                                <td>기본계약</td>
+                                <td>일반상해고도<br/>후유장해</td>
+                                <td>1,000</td>
+                                <td>20년납/100세만기</td>
+                                <td>130</td>
+                                <td>130</td>
+                                <td>120</td>
+                                <td>50</td>
+                                <td>60</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>선택특약</td>
+                                <td>일반상해사망</td>
+                                <td>1,000</td>
+                                <td>20년납/100세만기</td>
+                                <td>800</td>
+                                <td>830</td>
+                                <td>810</td>
+                                <td>380</td>
+                                <td>380</td>
+                                <td>370</td>
+                            </tr>
+                            <tr>
+                                <td>선택특약</td>
+                                <td>일반상해사망</td>
+                                <td>1,000</td>
+                                <td>20년납/100세만기</td>
+                                <td>800</td>
+                                <td>830</td>
+                                <td>810</td>
+                                <td>380</td>
+                                <td>380</td>
+                                <td>370</td>
+                            </tr>
+                            <tr>
+                                <td>선택특약</td>
+                                <td>일반상해사망</td>
+                                <td>1,000</td>
+                                <td>20년납/100세만기</td>
+                                <td>800</td>
+                                <td>830</td>
+                                <td>810</td>
+                                <td>380</td>
+                                <td>380</td>
+                                <td>370</td>
+                            </tr>
+                            <tr>
+                                <td>선택특약</td>
+                                <td>일반상해사망</td>
+                                <td>1,000</td>
+                                <td>20년납/100세만기</td>
+                                <td>800</td>
+                                <td>830</td>
+                                <td>810</td>
+                                <td>380</td>
+                                <td>380</td>
+                                <td>370</td>
+                            </tr>
+                            <tr>
+                                <td>선택특약</td>
+                                <td>일반상해사망</td>
+                                <td>1,000</td>
+                                <td>20년납/100세만기</td>
+                                <td>800</td>
+                                <td>830</td>
+                                <td>810</td>
+                                <td>380</td>
+                                <td>380</td>
+                                <td>370</td>
+                            </tr>
+                            <tr>
+                                <td>선택특약</td>
+                                <td>일반상해사망</td>
+                                <td>1,000</td>
+                                <td>20년납/100세만기</td>
+                                <td>800</td>
+                                <td>830</td>
+                                <td>810</td>
+                                <td>380</td>
+                                <td>380</td>
+                                <td>370</td>
+                            </tr>
+                            <tr>
+                                <td>선택특약</td>
+                                <td>일반상해사망</td>
+                                <td>1,000</td>
+                                <td>20년납/100세만기</td>
+                                <td>800</td>
+                                <td>830</td>
+                                <td>810</td>
+                                <td>380</td>
+                                <td>380</td>
+                                <td>370</td>
+                            </tr>
+                            <tr>
+                                <td>선택특약</td>
+                                <td>일반상해사망</td>
+                                <td>1,000</td>
+                                <td>20년납/100세만기</td>
+                                <td>800</td>
+                                <td>830</td>
+                                <td>810</td>
+                                <td>380</td>
+                                <td>380</td>
+                                <td>370</td>
+                            </tr>
+                            <tr>
+                                <td>선택특약</td>
+                                <td>일반상해사망</td>
+                                <td>1,000</td>
+                                <td>20년납/100세만기</td>
+                                <td>800</td>
+                                <td>830</td>
+                                <td>810</td>
+                                <td>380</td>
+                                <td>380</td>
+                                <td>370</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">보장보험료</td>
+                                <td>51,821</td>
+                                <td>64,838</td>
+                                <td>68,242</td>
+                                <td>40,971</td>
+                                <td>47,700</td>
+                                <td>44,153</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">적립보험료</td>
+                                <td>9</td>
+                                <td>2</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>-</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">납입보험료</td>
+                                <td>51,830</td>
+                                <td>64,840</td>
+                                <td>68,250</td>
+                                <td>40,980</td>
+                                <td>47,700</td>
+                                <td>44,160</td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <p>※ 상기 보험료는 가입나이, 성별, 직업, 직종에 따라 달라질 수 있으며, 보험기간, 납입기간, 가입금액 선택에 따라 달라질 수 있습니다.</p><br/><br/>
+                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;해지환급금 예시</span><br/>[100세만기(일부20년만기), 20년납 상해 1급, 40세,
+                            남자, 월보험료 : 64,840원]<b>단위 : 천원</b></p><br/><br/>
+                        <table>
+                            <tr>
+                                <th rowspan="3">경과기간</th>
+                                <th colspan="7">기본계약 및 기타 특약담보(실손의료비 제외)</th>
+                                <th rowspan="3">중도인출<br/>예상가능금액</th>
+                                <th colspan="2" rowspan="2">실손의료비 담보</th>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">납입보험료</th>
+                                <th colspan="2">최저보증이율</th>
+                                <th colspan="2">적용이율 2.65%</th>
+                                <th colspan="2">평균공시이율 2.65%</th>
+                            </tr>
+                            <tr>
+                                <th>환급금</th>
+                                <th>환급율</th>
+                                <th>환급금</th>
+                                <th>환급율</th>
+                                <th>환급금</th>
+                                <th>환급율</th>
+                                <th>납입보험료</th>
+                                <th>환급금</th>
+                            </tr>
+                            <tr>
+                                <td>3개월</td>
+                                <td>194</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>6개월</td>
+                                <td>389</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>9개월</td>
+                                <td>583</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>12개월</td>
+                                <td>778</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2년 12개월</td>
+                                <td>2,334</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2년 12개월</td>
+                                <td>2,334</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2년 12개월</td>
+                                <td>2,334</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2년 12개월</td>
+                                <td>2,334</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2년 12개월</td>
+                                <td>2,334</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>20년</td>
+                                <td>2,334</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>20년</td>
+                                <td>2,334</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>20년</td>
+                                <td>2,334</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>20년</td>
+                                <td>2,334</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>20년</td>
+                                <td>2,334</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>20년</td>
+                                <td>2,334</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>20년</td>
+                                <td>2,334</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>20년</td>
+                                <td>2,334</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>1,094</td>
+                                <td>46.8%</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>만기</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </table>
+                        <br/><br/>
+                        <p>※ 상기 납입 보험료 및 예상환급률은 실손의료비(1년납 1년만기) 보험료가 포함되지 않아서, 예상 만기환급률이 100%초과될 수 있습니다. 예시표상 납입<br/>
+                            보험료와 실손의료비담보 보험료를 합산하여 예상 만기환급률을 계산하면, 100%미만으로 떨어지게 됩니다.<br / ><br/>적용이율, 평균공시이율이 "0%"인 경우는
+                            적립보험료가 "0원"으로 설계된 계약입니다. 적용이율, 평균공시이율은 절립보험료에만 적용이 되므로 이율이 "0%"이며, 이율변동에 따른 환급금(률)의 차이가
+                            없습니다.</p>
+                    </div>
+                </div>
+                <div id="tab_content4" class="tab_area" no="4" >
+
+                    <div class="know">
+                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;보험계약 체결 전 유의사항</span><br/>보험계약을 청약할 때는 보험상품명, 보험기간, 보험료
+                            납입기간, 피보험자 등을 반드시 확인하시고, 넷 등을 통해 상품설명서와 보험약관을 확인해 보거나 설계사, 상담원에게 수령 후 설명을 받으시기 바랍니다.<br/>기존
+                            보험계약을 해지하고 새로운 보험계약을 체결하는 경우에 보험인수가 거절되거나, 보험료가 인상될 수 있으며, 보장내용이 달라질 수 있으니 유의하시기 바랍니다.</p>
+                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;보험계약의 무효</span><br/>다움 중 한가지에 해당하는 경우에는 계약을 무효로하며 이미 납입한
+                            보험룔를 돌려드립니다.<br/><br/>① 타인이 사망을 보험금 지급사유로 하는 계약에서 계약을 체결할 때까지 피보험자의 서면에 의한 동의를 얻지 않을 겨우<br/>②
+                            만 15세미만자, 심신상실자 또는 심신박약자를 피보험자로 하여 사망을 보험금 지급사우로 한 경우<br/>③ 계약체결시 계약에서 정한 피보험자의 나이에 미달되었거나
+                            초과되었을 경우</p>
+                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;보험계약자의 자필서명 의무</span><br/>청약서는 보험계약자 본인이 작성하고 서명란에도 보험계약자
+                            본인 및 피보험자가 자필서명을 하셔야 합니다. 자필서명을 하지 않으신 경우 보험계약의 효력 등과 관련하여 불이익이 있을 수 있습니다.<br/>인터넷을 통해 직접
+                            보험에 가입하시는 경우에는 공인인증서를 통한 전자서명으로 자필서명을 대신할 수 있습니다.<br/>전화로 가입할 때는 계약자와 피보험자가 동일하고 수익자가 본인이거나
+                            상속인인 경우에 한해 녹취로 자필서명을 대신할 수 있습니다.</p>
+                        <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;가입자의 계약 전후 알릴 의무</span><br/><b>가입자의 계약 전 알릴 의무</b><br/>-
+                            계약자 또는 피보험자 등은 보험계약 시 과거의 건강상태, 직업 등 청약서의 기재사항 및 질문사항에 대하여 알고 있는 내용을 반드시 사실대로 알려야 하며, 그렇지 않은
+                            경우 보험금의 지급이 거절되거나 계약이 해지될 수 있습니다.<br/><br/><b>가입자의 상해보험계약 후 알릴 의무</b><br/>-계약자 또는 피보험자는
+                            보험계약을 맺은 후 피보험자의 직업 또는 직무변경으로 인한 위험 증가 및 주소 변경 등 보험약관에 정한 계약후 알릴 의무 사항이 발생하였을 경우 지체없이 회사에
+                            알리고 보험증권에 확인을 받아야 합니다. 그렇지않을 경우 보험금의 지급이 거절될 수 있습니다.</p>
+                        <p><span></span></p>
+                        <p><span></span></p>
+                        <p><span></span></p>
+                        <p><span></span></p>
+                        <p><span></span></p>
+                        <p><span></span></p>
+                        <p><span></span></p>
+                        <p><span></span></p>
+                        <strong>대리점명 : (주)글로벌금융판매 대리점번호 : 2009*091278호</strong>
+                    </div>
+                </div>
+                <div id="tab_content5" class="tab_area" no="5" >
+					<!-- 정보입력-->
+					<div class="t-identify">
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;내 암보험료는 얼마</p>
+					<table>
+						<tr>
+							<th scope="row" id="input01-1"><label for="input01">이름</label></th>
+							<td headers="input01-1"><input type="text" name="textfield" id="input01" class="textfield" style="outline:none" placeholder="이름을 입력해주세요." /></td>
+							<th scope="row" id="input01-1"><label for="input01">생년월일</label></th>
+							<td headers="input01-2"><input type="text" name="textfield" id="input01" class="textfield" style="outline:none" placeholder="예)19860120"/></td>
+						</tr>
+						<tr>
+							<th scope="row" id="input03-1"><label>성별</label></th>
+							<td><input type="radio" name="cal" id="r_circle01"  onclick="radio_Test();"/><label for="r_circle01"><img id="a123" src="images/cont01-but01.jpg" alt="남자" /></label><input type="radio" name="cal" id="r_circle02"  onclick="radio_Test();"/><label for="r_circle02"><img id="a456" src="images/cont01-but02.jpg" alt="여자" / ></label></td>
+							<th scope="row" id="input02-1"><label for="input02">연락처</label></th>
+							<td headers="input02-1">
+							<select name="select" id="select">
+								<option>010</option>
+								<option>011</option>
+								<option>019</option>
+							</select>
+							<input type="text" name="textfield" id="input02" class="textfield" style="outline:none" /> <input type="text" name="textfield" id="input02" class="textfield" style="outline:none" /></td>
+						</tr>
+						<tr>
+							<td colspan="2" scope="row" ><label>개인정보수집 및 이용 동의<input type="checkbox" id="agree" name="agree" required class="required"></label></td>
+						</tr>
+					</table>
+					<!-- 정보입력 end-->
+					<!-- 버튼-->
+					<div id="but04">
+						<input type="image" src="images/pop01-but01.png" alt="상담신청" />
+					</div>
+					<!-- 버튼 end-->
+				</div>
+                    
+                <!-- tab-->
+            </div>
+        </div>
+    </div>
+    <!--레이어팝업 end-->
+</div>
+
+
+</body>
+
+<script>
+$("#pop_tab1").click(function(){
+        console.log("pop_tab1");
+        $("#pop_tab1").addClass("on");
+        $("#pop_tab2").removeClass("on");
+        $("#pop_tab3").removeClass("on");
+        $("#pop_tab4").removeClass("on");
+        $("#pop_tab5").removeClass("on");
+        
+
+        $("#tab_content1").addClass("on");
+        $("#tab_content2").removeClass("on");
+        $("#tab_content3").removeClass("on");
+        $("#tab_content4").removeClass("on");
+        $("#tab_content5").removeClass("on");
+    });
+    $("#pop_tab2").click(function(){
+        $("#pop_tab2").addClass("on");
+        $("#pop_tab1").removeClass("on");
+        $("#pop_tab3").removeClass("on");
+        $("#pop_tab4").removeClass("on");
+        $("#pop_tab5").removeClass("on");
+
+        $("#tab_content2").addClass("on");
+        $("#tab_content1").removeClass("on");
+        $("#tab_content3").removeClass("on");
+        $("#tab_content4").removeClass("on");
+        $("#tab_content5").removeClass("on");
+    });
+    $("#pop_tab3").click(function(){
+        $("#pop_tab3").addClass("on");
+
+        $("#pop_tab1").removeClass("on");
+        $("#pop_tab2").removeClass("on");
+        $("#pop_tab4").removeClass("on");
+        $("#pop_tab5").removeClass("on");
+
+        $("#tab_content3").addClass("on");
+        $("#tab_content2").removeClass("on");
+        $("#tab_content1").removeClass("on");
+        $("#tab_content4").removeClass("on");
+        $("#tab_content5").removeClass("on");
+    });
+    $("#pop_tab4").click(function(){
+        $("#pop_tab4").addClass("on");
+        $("#pop_tab2").removeClass("on");
+        $("#pop_tab3").removeClass("on");
+        $("#pop_tab1").removeClass("on");
+        $("#pop_tab5").removeClass("on");
+
+        $("#tab_content4").addClass("on");
+        $("#tab_content2").removeClass("on");
+        $("#tab_content3").removeClass("on");
+        $("#tab_content1").removeClass("on");
+        $("#tab_content5").removeClass("on");
+    });
+
+    $("#pop_tab5").click(function(){
+        $("#pop_tab5").addClass("on");
+        $("#pop_tab4").removeClass("on");
+        $("#pop_tab2").removeClass("on");
+        $("#pop_tab3").removeClass("on");
+        $("#pop_tab1").removeClass("on");
+
+$("#tab_content5").addClass("on");
+        $("#tab_content4").removeClass("on");
+        $("#tab_content2").removeClass("on");
+        $("#tab_content3").removeClass("on");
+        $("#tab_content1").removeClass("on");
+    });
+
+    $(function () {
+//        $("#pop-example01").hide();
+//        $('#Wrap').fadeTo(300,0.6);
+//        $('#Wrap').fadeTo(300,1.0);
+//        pop_init();
+    });
+
+    function pop_open(no) {
+        $('.pop_sec').hide();
+        $('.pop_sec[no=' + no + ']').show();
+        $('.func_mask_area').fadeTo(300, 0.6);
+        $('.func_pop_area').fadeTo(300, 1.0);
+        $('.tab_area').hide();
+        $('.tab_area[no=1]').show();
+
+        $('.func_tab_nav').find('li').removeClass('on');
+        $('.func_tab_nav').find('li[no=1]').addClass('on');
+
+
+        pop_init();
+
+    }
+
+    $('.func_estimate_ok').click(function () {
+
+
+        var fm = $('form[name=realtime_estimate]');
+
+
+        if (!fm.find('input[name=uname]').val()) {
+            alert('이름을 입력해주세요.');
+            fm.find('input[name=uname]').focus();
+            return false;
+        }
+
+        if (!fm.find('input[name=ubirth]').val()) {
+            alert('생년월일을 입력해주세요.');
+            fm.find('input[name=ubirth]').focus();
+            return false;
+        }
+
+        if (fm.find('input[name=ubirth]').val().length != 8) {
+            alert('생년월일 8자리를 정확하게 입력해주세요.');
+            fm.find('input[name=ubirth]').focus();
+            return false;
+        }
+
+        if (!fm.find('input[name=uhp_2]').val() || !fm.find('input[name=uhp_3]').val()) {
+            alert('연락처를 입력해주세요.');
+            fm.find('input[name=uhp_2]').focus();
+            return false;
+        }
+
+        if (fm.find('input[name=agree]:checkbox:checked').val() != 1) {
+            alert('개인정보 활용 수집동의에 체크해주세요.');
+            fm.find('input[name=agree]').focus();
+            return false;
+        }
+
+        var o_OBJ = {};
+        o_OBJ = fm.serializeArray();
+
+        console.log(fm.serializeArray());
+//        JSON.stringify(fm.toJSON());
+
+        $.ajax({
+            url: "http://www.direct-silbi.co.kr/proc/get_estimate_SITE02.php",
+            data: o_OBJ,
+            dataType: "json",
+            type: "POST",
+            timeout: 5000,
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert("오류가 발생하였습니다.\n잠시후에 시도해주세요.");
+                console.log(thrownError);
+                console.log(xhr);
+                console.log(ajaxOptions);
+            },
+            success: function (data) {
+                console.log('success');
+                console.log(data);
+
+
+                if (data.code == "ERR") {
+                    alert(data.msg);
+                } else {
+
+
+                    $('#calculate_name').html(fm.find('input[name=uname]').val());
+                    $('#calculate_name2').html(fm.find('input[name=uname]').val());
+                    $('#calculate_name3').html(fm.find('input[name=uname]').val());
+
+                    $('#pop_name').html(fm.find('input[name=uname]').val());
+//                    $('#pop_price').html(data["ary_data"]["uage"]);
+
+                    var a = data.ary_data;
+
+                    console.log(a);
+
+                    $('#calculate_age').html(data["ary_data"]["uage"]);
+
+                    //네이버프리미엄로그전환스킙트
+                    if (!wcs_add) var wcs_add = {};
+                    wcs_add["wa"] = "s_2bca22342cd1";
+                    var _nasa = {};
+                    _nasa["cnv"] = wcs.cnv("4", "1"); // 전환유형, 전환가치 설정해야함. 설치매뉴얼 참고
+                    wcs_do(_nasa);
+                    //네이버프리미엄로그전환스킙트
+                    $('.obj_result_tit').html('<b>' + data.ary_data.uname + '</b>님<span>보험료 계산결과</span>')
+                    $('.obj_result_goods_1').html('월 <b>' + data.ary_data.estimate[0] + '</b>원');
+                    $('.obj_result_goods_2').html('월 <b>' + data.ary_data.estimate[1] + '</b>원');
+                    $('.obj_result_goods_3').html('월 <b>' + data.ary_data.estimate[2] + '</b>원');
+                    $('.obj_result_goods_4').html('월 <b>' + data.ary_data.estimate[3] + '</b>원');
+                    $('.obj_result_goods_5').html('월 <b>' + data.ary_data.estimate[4] + '</b>원');
+                    $('.obj_result_goods_6').html('월 <b>' + data.ary_data.estimate[5] + '</b>원');
+                    $('.obj_result_name').text(data.ary_data.uname);
+                    $('.obj_result_age').text(data.ary_data.uage);
+
+                    //getInquiryList();
+                    /*
+                     $('form').each(function() {
+                     this.reset();
+                     });
+                     */
+
+                }
+
+            }
+        });
+
+    });
+
+
+function setApply_pop(fm, fm_id) {
+
+        if (fm.uname.value.length < 2) {
+            alert("이름을 입력해주세요.");
+            fm.uname.focus();
+            return false;
+        }
+
+
+        if (fm.uhp.value.length < 13) {
+            alert('연락처를 입력해주세요.');
+            fm.find('input[name=uhp2]').focus();
+            return false;
+        }
+
+
+//        if (fm.uhp.value.length < 10) {
+//            alert("연락처를 입력해주세요.");
+//            fm.uhp.focus();
+//            return false;
+//        }
+
+       
+
+        $('#' + fm_id).ajaxSubmit({
+            url: "http://www.direct-silbi.co.kr/proc/set_consulting_SITE02.php",
+            dataType: 'json',
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr);
+                console.log(ajaxOptions);
+                console.log(thrownError);
+                alert("오류가 발생하였습니다.\n잠시후에 시도해주세요.");
+            },
+            beforeSend: function () {
+
+            },
+            uploadProgress: function (event, position, total, percentComplete) {
+
+            },
+            success: function (data) {
+
+                console.log(data);
+
+                if (data.code == "OK") {
+                    //네이버프리미엄로그전환스킙트
+//                    if (!wcs_add) var wcs_add = {};
+//                    wcs_add["wa"] = "s_2bca22342cd1";
+//                    var _nasa = {};
+//                    _nasa["cnv"] = wcs.cnv("4", "1"); // 전환유형, 전환가치 설정해야함. 설치매뉴얼 참고
+//                    wcs_do(_nasa);
+//                    //네이버프리미엄로그전환스킙트
+
+                    alert('상담신청이 정상적으로 접수되었습니다.');
+                    $('form').each(function () {
+                        this.reset();
+                    });
+                    $('.func_agree_btn').removeClass('on').next().val(0);
+
+                }
+                else if (data.code == "ERR") {
+                    alert(data.msg);
+                }
+
+            },
+            complete: function (xhr) {
+
+            }
+        });
+
+
+    }
+
+    function setApply(fm, fm_id) {
+
+        if (fm.uname.value.length < 2) {
+            alert("이름을 입력해주세요.");
+            fm.uname.focus();
+            return false;
+        }
+
+
+        if (fm.uhp2.value.length < 4 || fm.uhp2.value.length < 4) {
+            alert('연락처를 입력해주세요.');
+            fm.find('input[name=uhp2]').focus();
+            return false;
+        }
+
+
+//        if (fm.uhp.value.length < 10) {
+//            alert("연락처를 입력해주세요.");
+//            fm.uhp.focus();
+//            return false;
+//        }
+
+        if (!fm.agree.checked) {
+            alert("개인정보 활용에 동의해주세요.");
+            fm.agree.focus();
+            return false;
+        }
+
+        $('#' + fm_id).ajaxSubmit({
+            url: "http://www.direct-silbi.co.kr/proc/set_consulting_SITE02.php",
+            dataType: 'json',
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr);
+                console.log(ajaxOptions);
+                console.log(thrownError);
+                alert("오류가 발생하였습니다.\n잠시후에 시도해주세요.");
+            },
+            beforeSend: function () {
+
+            },
+            uploadProgress: function (event, position, total, percentComplete) {
+
+            },
+            success: function (data) {
+
+                console.log(data);
+
+                if (data.code == "OK") {
+                    //네이버프리미엄로그전환스킙트
+//                    if (!wcs_add) var wcs_add = {};
+//                    wcs_add["wa"] = "s_2bca22342cd1";
+//                    var _nasa = {};
+//                    _nasa["cnv"] = wcs.cnv("4", "1"); // 전환유형, 전환가치 설정해야함. 설치매뉴얼 참고
+//                    wcs_do(_nasa);
+//                    //네이버프리미엄로그전환스킙트
+
+                    alert('상담신청이 정상적으로 접수되었습니다.');
+                    $('form').each(function () {
+                        this.reset();
+                    });
+                    $('.func_agree_btn').removeClass('on').next().val(0);
+
+                }
+                else if (data.code == "ERR") {
+                    alert(data.msg);
+                }
+
+            },
+            complete: function (xhr) {
+
+            }
+        });
+
+
+    }
+
+    $(function () {
+        getInquiryList();
+    });
+
+
+    function getInquiryList() {
+
+        $.post("http://www.direct-silbi.co.kr/proc/get_history_SITE02.php", {'hand': 'get'}, function (d) {
+
+            $('#obj_history_area').html(d);
+			
+            $('#obj_history_area').scrollTop(4100);
+           rollInquiryList();
+			 
+		
+
+        });
+    }
+
+			
+    var roll_list = '';
+
+    function rollInquiryList() {
+
+        clearTimeout(roll_list);
+
+        var h = $('#obj_history_area').scrollTop() - 30;
+
+        $('#obj_history_area').animate({scrollTop: h}, '250', 'swing', function () {
+        });
+
+        roll_list = setTimeout("rollInquiryList();", 3000);
+    }
+
+    function radio_Test() {
+
+        var radio_chk = document.getElementById("r_circle01");
+
+        var radio_chk2 = document.getElementById("r_circle02");
+
+        var a123 = document.getElementById("a123");
+        var a456 = document.getElementById("a456");
+
+        if (radio_chk.checked == true) {
+
+
+            a123.src = "images/cont01-but01_on.jpg";
+
+        } else {
+
+
+            a123.src = "images/cont01-but01.jpg";
+
+        }
+
+        if (radio_chk2.checked == true) {
+
+
+            a456.src = "images/cont01-but02_on.jpg";
+
+        } else {
+
+
+            a456.src = "images/cont01-but02.jpg";
+
+        }
+
+    }
+
+
+</script>
+</html>

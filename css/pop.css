@@ -1,0 +1,53 @@
+
+/*pop*/
+#pop01 {position:absolute; background:url('../images/pop01-bg.png') no-repeat 0 0 ; width:769px; height:513px; text-align:center;}
+#pop01 #info {position:relative; margin-top:263px; }
+#pop02 {position:absolute; background:url('../images/pop02-bg.png') no-repeat 0 0 ; width:769px; height:603px; text-align:center;}
+#pop03 {position:absolute; background:url('../images/pop03-bg.png') no-repeat 0 0 ; width:769px; height:603px; text-align:center;}
+#pop04 {position:absolute; background:url('../images/pop04-bg.png') no-repeat 0 0 ; width:446px; height:603px; text-align:center;}
+#pop04 #info {position:relative; margin:120px 0 0 130px; float:left; }
+#pop04 #input01 {float:left;width:260px; height:26px; padding:5px; background-color:#ffffff; border: 2px solid #ff4651;/*IE9+,FF4+,chrome,Safari5,+opera*/
+    border-radius: 0px; /*오페라 10.5이상*/
+    -moz-border-radius: 0px; /*모질라*/
+    -webkit-border-radius: 0px; /*웹킷브라우저 구글크롬 사파리*/
+    behavior: url(ie-css3.htc);/*IE6이상 IE-CSS3 핵사용*/}
+#pop04 #input02 {float:left;width:74px; height:26px; padding:5px; margin-right: 5px; background-color:#ffffff; border: 2px solid #ff4651;/*IE9+,FF4+,chrome,Safari5,+opera*/
+    border-radius: 0px; /*오페라 10.5이상*/
+    -moz-border-radius: 0px; /*모질라*/
+    -webkit-border-radius: 0px; /*웹킷브라우저 구글크롬 사파리*/
+    behavior: url(ie-css3.htc);/*IE6이상 IE-CSS3 핵사용*/}
+#pop04 .date { float:left; margin-top:25px;}
+#pop04 .call { float:left; margin-top:25px;}
+#pop04 .call select {float:left;width:86px; height:40px; padding:5px; margin-right: 5px; background-color:#ffffff; border: 2px solid #ff4651;/*IE9+,FF4+,chrome,Safari5,+opera*/
+    border-radius: 0px; /*오페라 10.5이상*/
+    -moz-border-radius: 0px; /*모질라*/
+    -webkit-border-radius: 0px; /*웹킷브라우저 구글크롬 사파리*/
+    behavior: url(ie-css3.htc);/*IE6이상 IE-CSS3 핵사용*/}
+#pop04 .data { float:left; margin-top:50px; width:446px;}
+#pop04 .data span{ font-size: 27px; letter-spacing:-0.12em;}
+#pop04 .d-01 {float:left; margin-left:40px; text-align:center;}
+#pop04 .d-02 {float:left; margin-left:205px; text-align:center;}
+#pop04 .d-03 {float:left; margin:25px 0 0 175px; text-align:center;}
+#pop-example01 {position:absolute; background:url('../images/pop-example01.png') no-repeat 0 0 ; width:1093px; height:961px; text-align:center;}
+#pop-example02 {position:absolute; background:url('../images/pop-example02.png') no-repeat 0 0 ; width:1093px; height:961px; text-align:center;}
+#info {position:relative; margin-top:223px; }
+.make01 {float:left; margin-left:150px; display:inline-block; # margin-left:55px;}
+.make02	{float:left; margin:30px 0 0 150px; display:inline-block; # margin:30px 0 0 150px;}
+.textarea {float:left; display:inline-block; margin:15px 0 0 65px; #margin:15px 0 0 10px;}
+.check {float:left; margin:20px 0 0 275px; # margin:8px 0 0 275px;}
+#but01 {position:relative; float:left; margin:10px 0 0 265px; #margin:10px 0 0 265px;}
+.p-e-reckoning { width:453px; margin:215px 0 0 585px; }
+.p-e-reckoning  span { font-size:27px; letter-spacing:-0.12em;  }
+.p-e-reckoning .name { float:left; text-align:center; }
+.p-e-reckoning .sum { float:left; margin-left:170px; }
+#but02 {position:relative; float:left; margin:110px 0 0 585px; #margin:110px 0 0 585px;}
+#but03 {position:relative; float:left; margin:50px 0 0 103px; #margin:50px 0 0 103px;}
+.close {position:relative; float:right; margin:10px;}
+
+
+
+/*margin*/
+.m01 {margin-right: 130px;}
+.m02 {margin-left: 110px;}
+.m03 {margin-top: 35px;}
+.m04 {margin-left: 50px;}
